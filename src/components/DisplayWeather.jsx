@@ -2,10 +2,10 @@ import React from "react";
 
 const DisplayWeather = ({ data }) => {
     console.log('props', data);
-    const iconUrl = `http://openweathermap.org/img/wn/${data.cod !== 404 ? data.weather[0].icon : null}.png`
+    const iconUrl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weather[0].icon : null}.png`
     return (<div className="display-weather">
         {
-            data.cod !== 404 ? (
+            data.cod != 404 ? (
                 <React.Fragment>
                     <div className="card mt-3">
                         <div className="card-body" style={{background:"rgb(199, 199, 199)"}}>
